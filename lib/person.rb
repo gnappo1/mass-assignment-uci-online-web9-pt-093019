@@ -3,6 +3,6 @@ class Person
 :weight, :handed, :complexion, :t_shirt_size, 
 :wrist_size, :glove_size, :pant_length, :pant_width
   def initialize(args)
-    args.each {|key, value| self.instance_variable_set("#{key}=", value)}
+    args.each {|key, value| self.send("#{key}=", value)}
   end
 end
